@@ -26,8 +26,9 @@ vim.opt.whichwrap = "<,>,h,l"
 
 -- 是否显示状态栏 0 表示不显示，1 表示只在多窗口时显示，2 表示显示
 vim.opt.laststatus = 2
--- 状态行显示的内容, 不知道怎么写表达式
+-- 状态行显示的内容
 -- set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+vim.opt.statusline = "%F%m%r%h%w [FORMAT=%{&ff}] [TYPE=%Y] [POS=%l,%v][%p%%] %{strftime(\"%d/%m/%y - %H:%M\")}"
 
 ------------------------------------------------
 -------------- 文字, 制表符和缩进 --------------

@@ -1,5 +1,6 @@
 require('mason').setup({
     ui = {
+        log_level = vim.log.levels.DEBUG,
         icons = {
             package_installed = "✓",
             package_pending = "➜",
@@ -59,5 +60,7 @@ lspconfig.pylsp.setup({
     on_attach = on_attach,
 })
 
-lspconfig.clangd.setup{}
+lspconfig.clangd.setup({
+    on_attach = on_attach,
+})
 
