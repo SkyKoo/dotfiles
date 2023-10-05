@@ -137,8 +137,8 @@ vim.opt.encoding = "utf8"
 
 -- 检测文件编码时, 优先考虑 UTF-8
 vim.opt.fileencodings = "utf-8,ucs-bom,gbk,gb2312,big5,latin1"
--- 设置终端编码, 似乎每什么用
--- vim.opt.termencoding = "utf-8"
+-- 设置终端编码
+vim.opt.termencoding = "utf-8"
 
 -- 设置使用unix fileformat, 就是处理行结束符的问题
 -- unix读取dos格式文件, 会出现^M, 它会使某些脚本执行出错
