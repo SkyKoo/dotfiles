@@ -56,6 +56,10 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+lspconfig.gopls.setup({
+    on_attach = on_attach,
+})
+
 lspconfig.pylsp.setup({
     on_attach = on_attach,
 })
@@ -63,4 +67,3 @@ lspconfig.pylsp.setup({
 lspconfig.clangd.setup({
     on_attach = on_attach,
 })
-
