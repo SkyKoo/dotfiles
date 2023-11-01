@@ -55,6 +55,13 @@ return require('packer').startup(function(use)
 
         use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
 
+        -- install without yarn or npm
+        use({
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
+        })
+
+        use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
