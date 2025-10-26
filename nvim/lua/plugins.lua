@@ -39,8 +39,11 @@ return require('packer').startup(function(use)
         ---------------------------------------
         -- NOTE: PUT YOUR THIRD PLUGIN HERE --
         ---------------------------------------
+        -- 两个主题
         use 'tanvirtin/monokai.nvim'
+        use 'p00f/alabaster.nvim'
 
+        -- lsp 相关
         use { 'williamboman/mason.nvim' }
         use { 'williamboman/mason-lspconfig.nvim'}
 
