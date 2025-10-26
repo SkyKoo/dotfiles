@@ -1,6 +1,5 @@
 -- define your colorscheme here
 -- local colorscheme = 'monokai_pro'
-vim.opt.termguicolors = true
 local colorscheme = 'alabaster'
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

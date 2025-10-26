@@ -124,6 +124,8 @@ vim.opt.syntax = "on"
 -- 背景使用黑色
 vim.opt.background = "dark"
 -- vim.opt.background = "light"
+-- 真彩色
+vim.opt.termguicolors = true
 -- 设置搜索高亮色
 -- 可以通过 :hi 查看当前支持的所有颜色及其配置命令
 -- hi Search term=standout ctermfg=0 ctermbg=3 guifg=Black guibg=Yellow
