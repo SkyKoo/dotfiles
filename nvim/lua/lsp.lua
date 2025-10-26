@@ -21,7 +21,8 @@ require('mason-lspconfig').setup({
 -- How to use setup({}): https://github.com/neovim/nvim-lspconfig/wiki/Understanding-setup-%7B%7D
 --     - the settings table is sent to the LSP
 --     - on_attach: a lua callback function to run after LSP atteches to a given buffer
-local lspconfig = require('lspconfig')
+-- local lspconfig = require('lspconfig')
+local lspconfig = vim.lsp
 
 -- Customized on_attach function
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -56,14 +57,17 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
-lspconfig.gopls.setup({
+-- lspconfig.gopls.setup({
+lspconfig.config('gopls', {
     on_attach = on_attach,
 })
 
-lspconfig.pylsp.setup({
+-- lspconfig.pylsp.setup({
+lspconfig.config('pylsp', {
     on_attach = on_attach,
 })
 
-lspconfig.clangd.setup({
+-- lspconfig.clangd.setup({
+lspconfig.config('clangd', {
     on_attach = on_attach,
 })
