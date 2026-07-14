@@ -81,6 +81,9 @@ vim.opt.textwidth = 500
 -- j1: 合理的缩进 Java 或 C++ 的匿名函数, 应该也适用于 JS
 vim.opt.cinoptions = "t0,g1,h1,N-s,j1"
 
+-- 解决Git 和诊断标记出现和显示导致列宽不断变换的问题，预留空位
+vim.opt.signcolumn = "yes:2"
+
 --------------------------------------
 -------------- 用户交互 --------------
 --------------------------------------
@@ -152,6 +155,8 @@ vim.opt.fileencodings = "utf-8,ucs-bom,gbk,gb2312,big5,latin1"
 vim.opt.fileformats = "unix,dos,mac"
 
 -- 如果行尾有多余的空格(包括 Tab 键), 该配置将让这些空格显示成可见的小方块
+-- :highlight SpecialKey guifg=darkgrey ctermfg=darkgrey
+-- vim.opt.SpecialKey = "guifg=darkgrey ctermfg=darkgrey"
 vim.opt.listchars = "tab:»■,trail:■"
 vim.opt.list = true
 
